@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/Login.css">
+    <script src="Js/Login.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <div class="header">
+                <img src="Img/Logo-Invima.png" alt="Logo" class="logo">
+                <a href="Registro.html" class="register-button">Registrarse
+                    <img src="Img/Icon.png" alt="Flecha" class="arrow-icon">
+                </a>
+            </div>
+            <div class="login-content">
+                <h2>¡Bienvenido de nuevo!</h2>
+                <h1>Inicia Sesión</h1>
+                <form action="dashboard.html" method="POST">
+                    <div class="form-group">
+                        <label for="email">Dirección de correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="Dirección de correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    </div>
+                    <div class="form-group-inline">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Recuérdame</label>
+                        </div>
+                        <a href="#" class="forgot-password">Olvidé mi contraseña</a>
+                    </div>
+                    <button type="submit" class="login-button">
+                        Iniciar sesión
+                        <img src="Img/arrow_forward_ios.png" alt="Flecha" class="arrow-icon">
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <img src="img/Logo_Invima-Te-Acompana_Blanco 1.png" alt="Invima Logo" class="footer-logo">
+                    <p>Sede principal: Carrera 10 #64 - 28 Bogotá, Colombia</p>
+                    <p>Teléfono conmutador: (+57)(601) 7422121</p>
+                    <p>Contáctenos PQRSD</p>
+                    <p>Horario de atención: Lunes a Viernes 7:30 a.m. a 3:30 p.m.</p>
+                    <p>Línea anticorrupción: (+57)(601) 7425898</p>
+                    <p>Notificaciones judiciales: notificaciones_judiciales@invima.gov.co</p>
+                    <p>Transparencia Invima: soytransparente@invima.gov.co</p>
+                    <br>
+                    <div class="social-icons">
+                        <a href="#"><img src="img/instagram.png" alt="Instagram" class="social-icon"></a>
+                        <a href="#"><img src="img/youtube.png" alt="YouTube" class="social-icon"></a>
+                        <a href="#"><img src="img/twitter.png" alt="Twitter" class="social-icon"></a>
+                        <a href="#"><img src="img/facebook.png" alt="Facebook" class="social-icon"></a>
+                    </div>
+                </div>
+                <div class="footer-center">
+                    <ul>
+                        <li class="footer-header"><a href="#">ENLACES DE INTERÉS</a></li>
+                        <br>
+                        <li><a href="#">EL INSTITUTO</a></li>
+                        <br>
+                        <li><a href="#">QUÉ HACEMOS</a></li>
+                        <br>
+                        <li><a href="#">ATENCIÓN AL CIUDADANO</a></li>
+                        <br>
+                        <li><a href="#">TRÁMITES Y SERVICIOS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <ul>
+                        <li><a href="#">NORMATIVIDAD</a></li>
+                        <br>
+                        <li><a href="#">PARTICIPA</a></li>
+                        <br>
+                        <li><a href="#">SALA DE PRENSA</a></li>
+                        <br>
+                        <li><a href="#">TRANSPARENCIA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <img src="img/blanco.png" alt="Invima Logo" class="footer-blanco-logo">
+                <img src="img/logo gov-03 1.png" alt="Gov.co Logo" class="footer-govco-logo">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva Realizada</title>
+    <!-- Estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/Reserva_Realizada.css">
+</head>
+<body>
+    <!-- Contenedor principal para centrar todo -->
+    <div class="main-container">
+        <!-- Título principal de la página -->
+        <h1>RESERVA REALIZADA <span id="form-progress">(3 de 3)</span></h1>
+        <h2>Reserva a nombre de</h2>
+
+        <!-- Contenedor principal del formulario -->
+        <div class="container">
+            <h3>Mi Reserva:</h3>
+            <form action="Confirmacion de Reserva.html" method="POST">
+                <!-- Contenedor especial para fecha -->
+                <div class="form-group special-group">
+                    <div class="date-container">
+                        <div class="form-group-inline">
+                            <label for="fecha_inicio">Fecha:</label>
+                            <!-- Aquí debería ir el campo de fecha -->
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Contenedor especial para hora -->
+                <div class="form-group special-group">
+                    <div class="time-container">
+                        <div class="form-group-inline">
+                            <label for="hora_inicio">Hora:</label>
+                            <!-- Aquí debería ir el campo de hora -->
+                        </div>
+                        <span class="time-separator">A</span>
+                        <div class="form-group-inline">
+                            <!-- Aquí debería ir el campo de hora fin -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botones de acción -->
+                <div class="form-group button-group">
+                    <button type="submit" class="button">NUEVA RESERVA</button>
+                    <button type="submit" class="button">CANCELAR RESERVA</button>
+                </div>
+
+                <!-- Contenedor para distribuir los campos en dos columnas -->
+                <div class="grid-container">
+                    <!-- Columna izquierda -->
+                    <div class="left-column">
+                        <div class="form-group">
+                            <label for="modalidad_laboral">Modalidad:</label>
+                            <!-- Aquí debería ir el campo de modalidad laboral -->
+                        </div>
+                        <div class="form-group">
+                            <label for="trabaja_en">Trabaja en:</label>
+                            <!-- Aquí debería ir el campo de lugar de trabajo -->
+                        </div>
+                    </div>
+                    <!-- Columna derecha -->
+                    <div class="right-column">
+                        <div class="form-group">
+                            <label for="horas_adicionales">Horas Adicionales:</label>
+                            <!-- Aquí debería ir el campo de horas adicionales -->
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Sección izquierda del footer -->
+            <div class="footer-left">
+                <img src="img/Logo_Invima-Te-Acompana_Blanco 1.png" alt="Invima Logo" class="footer-logo">
+                <p>Sede principal: Carrera 10 #64 - 28 Bogotá, Colombia</p>
+                <p>Teléfono conmutador: (+57)(601) 7422121</p>
+                <p>Contáctenos PQRSD</p>
+                <p>Horario de atención: Lunes a Viernes 7:30 a.m. a 3:30 p.m.</p>
+                <p>Línea anticorrupción: (+57)(601) 7425898</p>
+                <p>Notificaciones judiciales: notificaciones_judiciales@invima.gov.co</p>
+                <p>Transparencia Invima: soytransparente@invima.gov.co</p>
+                <br>
+                <div class="social-icons">
+                    <a href="#"><img src="img/instagram.png" alt="Instagram" class="social-icon"></a>
+                    <a href="#"><img src="img/youtube.png" alt="YouTube" class="social-icon"></a>
+                    <a href="#"><img src="img/twitter.png" alt="Twitter" class="social-icon"></a>
+                    <a href="#"><img src="img/facebook.png" alt="Facebook" class="social-icon"></a>
+                </div>
+            </div>
+            <!-- Sección central del footer -->
+            <div class="footer-center">
+                <ul>
+                    <li class="footer-header"><a href="#">ENLACES DE INTERÉS</a></li>
+                    <br>
+                    <li><a href="#">EL INSTITUTO</a></li>
+                    <br>
+                    <li><a href="#">QUÉ HACEMOS</a></li>
+                    <br>
+                    <li><a href="#">ATENCIÓN AL CIUDADANO</a></li>
+                    <br>
+                    <li><a href="#">TRÁMITES Y SERVICIOS</a></li>
+                </ul>
+            </div>
+            <!-- Sección derecha del footer -->
+            <div class="footer-right">
+                <ul>
+                    <li><a href="#">NORMATIVIDAD</a></li>
+                    <br>
+                    <li><a href="#">PARTICIPA</a></li>
+                    <br>
+                    <li><a href="#">SALA DE PRENSA</a></li>
+                    <br>
+                    <li><a href="#">TRANSPARENCIA</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Parte inferior del footer -->
+        <div class="footer-bottom">
+            <img src="img/blanco.png" alt="Invima Logo" class="footer-blanco-logo">
+            <img src="img/logo gov-03 1.png" alt="Gov.co Logo" class="footer-govco-logo">
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="Js/Funcionalidades_html.js"></script>
+    <script>
+        // Inicializa el progreso en la página
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgress();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Css/Seleccion_Espacio.css" />
+    <title>Seleccion de Espacio</title>
+    <h2>SELECCION DE ESPACIO (OTI)<span id="form-progress">2 de 3</span></h2>
+
+    <style>
+        #container {
+            width: 800px;
+            height: 600px;
+            border: 1px solid black;
+            border-radius: 8px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .showcase {
+            position: absolute;
+            top: 60px;
+            right: 60px;
+            background: rgba(0, 0, 0, 0.1);
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #777777;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .showcase li {
+            display: flex;
+            align-items: center;
+        }
+
+        .showcase li small {
+            margin-left: 2px;
+        }
+
+        .button {
+            margin-top: 20px;
+            background-color: #139EC8;
+            color: #FFFFFF;
+            padding: 15px 30px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <ul class="showcase">
+        <li>
+            <div class="seat one"></div>
+            <small>Disponibles</small>
+        </li>
+        <li>
+            <div class="seat"></div>
+            <small>No Disponibles</small>
+        </li>
+        <li>
+            <div class="seat selected"></div>
+            <small>Espacio Escogido</small>
+        </li>
+        <li>
+            <div class="seat sold"></div>
+            <small>Espacios Fijos</small>
+        </li>
+    </ul>
+    
+
+    <!-- Incluir la biblioteca Konva desde el CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/konva@latest/konva.min.js"></script>
+    <!-- Incluir el archivo JavaScript -->
+    <script src="Js/Espacio.js"></script>
+    <script src="Js/Funcionalidades_html.js"></script>
+        <button type="button" class="button" onclick="nextFormFromSelection()">CONFIRMAR</button>
+
+</body>
+</html>

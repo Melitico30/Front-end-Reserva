@@ -1,0 +1,296 @@
+@font-face {
+    font-family: 'Mukta';
+    src: url('Mukta-Medium.ttf');
+    font-weight: medium;
+    font-style: normal;
+}
+
+body {
+    font-family: "Mukta", sans-serif;
+    font-weight: bold;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+}
+
+.register-button {
+    background-color: #139EC8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-content h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.login-content h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.form-group-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.forgot-password {
+    font-size: 0.9rem;
+    color: #139EC8;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    width: 100%;
+    background-color: transparent;
+    color: #139EC8;
+    padding: 15px;
+    border: 2px solid #139EC8;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-button .arrow-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.login-button:hover {
+    background-color: #139EC8;
+    color: white;
+}
+
+.footer {
+    font-family: "Mukta", sans-serif;
+    background: linear-gradient(-90deg, #015799, #017eb1) !important;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.footer-left {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-right {
+    flex: 1;
+    max-width: 200px;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-center {
+    text-align: left;
+    padding: 20px;
+    color: white;
+    width: 400px;
+}
+
+.footer-logo {
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    margin: 5px 0;
+}
+
+.social-icons img {
+    width: 24px;
+    margin-right: 20px;
+}
+
+.footer-center ul, .footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-center ul li a, .footer-right ul li a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.footer-header a {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-top: 1px solid #ffffff;
+}
+
+.footer-blanco-logo {
+    max-height: 70px;
+    width: auto;
+    margin-left: 50px;
+}
+
+.footer-govco-logo {
+    max-height: 70px;
+    width: auto;
+}
+
+/* Estilos para tabletas */
+@media screen and (max-width: 1024px) {
+    .login-container {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Estilos para teléfonos móviles */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .login-container {
+        width: 90%;
+        margin-bottom: 0;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .register-button {
+        margin-bottom: 10px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .footer-blanco-logo,
+    .footer-govco-logo {
+        margin: 0 auto;
+    }
+}

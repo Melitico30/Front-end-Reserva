@@ -1,0 +1,318 @@
+@font-face {
+  font-family: 'Mukta';
+  src: url('Mukta-Medium.ttf');
+  font-weight: medium;
+  font-style: normal;
+}
+
+
+body {
+  font-family: "Mukta", sans-serif;
+  font-weight: bold;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 800px;
+  margin: 20px auto;
+  flex-grow: 1; /* Permite que el contenedor crezca para ocupar el espacio disponible */
+}
+
+h2 {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  width: 150px; /* Ajusta el ancho de los labels */
+  margin-right: 10px;
+  color: #333;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="text"],
+select {
+  padding: 10px;
+  width: calc(100% - 160px); /* Resta el ancho del label y el margen */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Estilos específicos para inputs de fecha y hora */
+input[type="date"],
+input[type="time"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 30px;
+}
+
+/* Estilos específicos para el grupo especial */
+.special-group input[type="date"],
+.special-group input[type="time"] {
+  color: #333; /* Cambia el color del texto */
+  font-size: 1.1em; /* Aumenta el tamaño de la fuente */
+  padding: 12px; /* Aumenta el padding */
+}
+
+.special-group label {
+  font-weight: bold;
+}
+
+/* Flexbox para contenedor de fechas */
+.date-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre los campos y el texto "AL" */
+}
+
+.date-separator {
+  margin: 0 10px; /* Ajusta el margen del texto "AL" */
+  font-weight: bold;
+}
+
+/* Flexbox para contenedor de horas */
+.time-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre los campos y el texto "A" */
+}
+
+.time-separator {
+  margin: 0 10px; /* Ajusta el margen del texto "A" */
+  font-weight: bold;
+}
+
+/* Flexbox para cada grupo de input y label */
+.form-group-inline {
+  display: flex;
+  align-items: center;
+}
+
+.form-group-inline label {
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+/* Asegúrate de que los inputs dentro del contenedor de fechas y horas no tengan ancho del 100% */
+.date-container .form-group-inline input[type="date"],
+.time-container .form-group-inline input[type="time"] {
+  width: auto;
+  flex: 1;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  max-width: 100%; /* Asegura que los inputs no excedan el ancho disponible */
+}
+
+.form-group .form-text {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.form-separator {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Contenedor de dos columnas */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-submit {
+  text-align: right; /* Alinea el botón a la derecha */
+  margin-top: 20px; /* Añade margen superior para separar del contenido anterior */
+}
+
+::placeholder {
+  text-align: center;
+  line-height: 100px; /* Centrado vertical */
+}
+
+button {
+  appearance: auto;
+  background-color: #139EC8;
+  padding: 15px 30px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0 auto; /* Centra el botón horizontalmente */
+  margin-left: 21%;
+  margin-top: -90px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.confirm-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.confirm-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+/* Estilos para el footer */
+.footer {
+  font-family: "Mukta", sans-serif;
+  background: linear-gradient(-90deg, #015799, #017eb1) !important; /* Fondo de gradiente lineal */
+  color: #ffffff; /* Color del texto */
+  padding: 20px 0; /* Espaciado interior */
+  text-align: center; /* Alineación del texto al centro */
+  width: 100%; /* Abarca completamente el ancho de la página */
+  position: relative; /* Fija el footer en la parte inferior */
+  bottom: 0; /* Coloca el footer al final de la página */
+  left: 0; /* Alinea el footer a la izquierda */
+  z-index: 1000; /* Asegura que el footer esté por encima de otros elementos */
+}
+
+.footer-container {
+  display: flex; /* Display flex */
+  justify-content: space-between; /* Alinea los elementos con espacio entre ellos */
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.footer-left {
+  flex: 1;
+  padding: 20px;  
+  text-align: left; /* Alinea el texto a la izquierda */
+
+}
+
+.footer-right {
+  flex: 1;
+  max-width: 200px;
+  padding: 20px;    /* Espaciado interno del contenedor */
+  text-align: left; /* Alinea el texto a la izquierda */
+
+
+}
+
+.footer-center {
+  text-align: left; /* Alinea el texto a la izquierda */
+  padding: 20px;    /* Espaciado interno del contenedor */
+  color: white; /* Color del texto */
+  width: 400px; /* Ancho del contenedor */
+}
+
+.footer-logo {
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+
+.footer-left p {
+  margin: 5px 0;
+}
+
+/*Estilo para iconos de redes sociales*/
+.social-icons img {
+  width: 24px;
+  margin-right: 20px;
+}
+/*Fin para iconos redes sociales*/
+
+
+.footer-center ul, .footer-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-center ul li a, .footer-right ul li a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.footer-header a {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between; /* Alinea los elementos con espacio entre ellos */
+  align-items: center; /* Alinea los elementos verticalmente */
+  padding: 10px 20px; /* Espaciado interior */
+  border-top: 1px solid #ffffff; /* Borde superior */
+
+}
+
+.footer-blanco-logo {
+  max-height: 70px;
+  width: auto;
+  margin-left: 50px;
+}
+
+
+.footer-govco-logo {
+  max-height: 70px;
+  width: auto;
+}
+
+

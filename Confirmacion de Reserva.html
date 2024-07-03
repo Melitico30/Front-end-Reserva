@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Reserva</title>
+    <!-- Estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/Style_Confirmacion_Reserva.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Título de la página -->
+        <h2>CONFIRMACIÓN DE RESERVA <span id="form-progress">1 de 3</span></h2>
+
+        <!-- Formulario de reserva -->
+        <form id="reservation-form">
+            <!-- Contenedor especial para fechas de inicio y fin -->
+            <div class="form-group special-group">
+                <div class="date-container">
+                    <div class="form-group-inline">
+                        <label for="fecha_inicio">Fecha:</label>
+                        <input type="date" id="fecha_inicio" name="fecha_inicio">
+                    </div>
+                    <span class="date-separator">AL</span>
+                    <div class="form-group-inline">
+                        <input type="date" id="fecha_fin" name="fecha_fin">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Contenedor especial para horas de inicio y fin -->
+            <div class="form-group special-group">
+                <div class="time-container">
+                    <div class="form-group-inline">
+                        <label for="hora_inicio">Hora:</label>
+                        <input type="time" id="hora_inicio" name="hora_inicio">
+                    </div>
+                    <span class="time-separator">A</span>
+                    <div class="form-group-inline">
+                        <input type="time" id="hora_fin" name="hora_fin">
+                    </div>
+                    <!-- Botón de confirmación -->
+                    <button type="button" id="confirm-button" class="button" onclick="nextForm()">CONFIRMAR</button>
+                </div>
+            </div>
+            <br>
+            <!-- Contenedor para distribuir los campos en dos columnas -->
+            <div class="grid-container">
+                <!-- Columna izquierda -->
+                <div class="left-column">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="modalidad_laboral">Modalidad Laboral:</label>
+                        <select id="modalidad_laboral" name="modalidad_laboral">
+                            <option value="">Seleccione la modalidad</option>
+                            <option value="autonomo">Autónomo</option>
+                            <option value="suplementario">Suplementario</option>
+                            <option value="intermitente">Intermitente</option>
+                            <option value="teletrabajo">Teletrabajo</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="trabaja_en">Trabaja en:</label>
+                        <select id="trabaja_en" name="trabaja_en">
+                            <option value="portatil">Portátil</option>
+                            <option value="portatil_vpn">Portátil (con VPN)</option>
+                            <option value="escritorio">Computador de escritorio</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Columna derecha -->
+                <div class="right-column">
+                    <div class="form-group">
+                        <label for="documento_identidad">C.C:</label>
+                        <input type="text" id="documento_identidad" name="documento_identidad" placeholder="Número de documento">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="horas_adicionales">Horas Adicionales:</label>
+                        <select id="horas_adicionales" name="horas_adicionales">
+                            <option value="0">-</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Sección izquierda del footer -->
+            <div class="footer-left">
+                <img src="img/Logo_Invima-Te-Acompana_Blanco 1.png" alt="Invima Logo" class="footer-logo">
+                <p>Sede principal: Carrera 10 #64 - 28 Bogotá, Colombia</p>
+                <p>Teléfono conmutador: (+57)(601) 7422121</p>
+                <p>Contáctenos PQRSD</p>
+                <p>Horario de atención: Lunes a Viernes 7:30 a.m. a 3:30 p.m.</p>
+                <p>Línea anticorrupción: (+57)(601) 7425898</p>
+                <p>Notificaciones judiciales: notificaciones_judiciales@invima.gov.co</p>
+                <p>Transparencia Invima: soytransparente@invima.gov.co</p>
+                <br>
+                <div class="social-icons">
+                    <a href="#"><img src="img/instagram.png" alt="Instagram" class="social-icon"></a>
+                    <a href="#"><img src="img/youtube.png" alt="YouTube" class="social-icon"></a>
+                    <a href="#"><img src="img/twitter.png" alt="Twitter" class="social-icon"></a>
+                    <a href="#"><img src="img/facebook.png" alt="Facebook" class="social-icon"></a>
+                </div>
+            </div>
+            <!-- Sección central del footer -->
+            <div class="footer-center">
+                <ul>
+                    <li class="footer-header"><a href="#">ENLACES DE INTERÉS</a></li>
+                    <br>
+                    <li><a href="#">EL INSTITUTO</a></li>
+                    <br>
+                    <li><a href="#">QUÉ HACEMOS</a></li>
+                    <br>
+                    <li><a href="#">ATENCIÓN AL CIUDADANO</a></li>
+                    <br>
+                    <li><a href="#">TRÁMITES Y SERVICIOS</a></li>
+                </ul>
+            </div>
+            <!-- Sección derecha del footer -->
+            <div class="footer-right">
+                <ul>
+                    <li><a href="#">NORMATIVIDAD</a></li>
+                    <br>
+                    <li><a href="#">PARTICIPA</a></li>
+                    <br>
+                    <li><a href="#">SALA DE PRENSA</a></li>
+                    <br>
+                    <li><a href="#">TRANSPARENCIA</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Parte inferior del footer -->
+        <div class="footer-bottom">
+            <img src="img/blanco.png" alt="Invima Logo" class="footer-blanco-logo">
+            <img src="img/logo gov-03 1.png" alt="Gov.co Logo" class="footer-govco-logo">
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="Js/Funcionalidades_html.js"></script>
+    <script>
+        // Inicializa el progreso en la página
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgress();
+        });
+    </script>
+</body>
+</html>
